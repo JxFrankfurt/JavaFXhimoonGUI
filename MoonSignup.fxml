@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MoonSignUpController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="158.0" layoutY="31.0" text="MOON 👋🌕📱❗" textAlignment="CENTER" AnchorPane.leftAnchor="79.0">
+         <font>
+            <Font name="AdobeArabic-Regular" size="50.0" />
+         </font>
+         <padding>
+            <Insets left="40.0" top="25.0" />
+         </padding>
+      </Label>
+      <GridPane hgap="10.0" layoutX="195.0" layoutY="113.0" vgap="10.0" AnchorPane.leftAnchor="150.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField focusTraversable="false" promptText="username" GridPane.columnSpan="2" />
+            <TextField focusTraversable="false" promptText="phone number" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+            <PasswordField focusTraversable="false" promptText="password" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+            <PasswordField focusTraversable="false" promptText="confirm password" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <TextArea editable="false" focusTraversable="false" layoutX="264.0" layoutY="276.0" minHeight="100.0" minWidth="120.0" prefHeight="100.0" prefWidth="120.0" text="FULL 🌕&#10;$8/month&#10;+NEW 🌕 features&#10;+mms use&#10;+8 challengers" />
+      <TextArea editable="false" focusTraversable="false" layoutX="127.0" layoutY="276.0" minHeight="100.0" minWidth="120.0" prefHeight="100.0" prefWidth="120.0" text="NEW 🌕&#10;free&#10;+ sms confirm&#10;+algo use&#10;+one challenger" />
+      <Button fx:id="submitSignup" focusTraversable="false" layoutX="227.0" layoutY="416.0" mnemonicParsing="false" onAction="#buttonSignUpSubmit" text="Submit!" />
+
+
+        <RadioButton layoutX="156.0" layoutY="376.0" mnemonicParsing="false" selected="true" text="NEW 🌕">
+         <toggleGroup>
+            <ToggleGroup fx:id="fullOrNew" />
+         </toggleGroup></RadioButton>
+        <RadioButton fx:id="full" layoutX="293.0" layoutY="376.0" mnemonicParsing="false" text="FULL 🌕" toggleGroup="$fullOrNew" />
+   </children>
+</AnchorPane>
